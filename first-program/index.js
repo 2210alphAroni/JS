@@ -1,0 +1,5 @@
+console.log("Welcome to code.")
+console.log('Hello world')
+console.log(20+67)
+console.log('20+67')
+console.log(10*10)
