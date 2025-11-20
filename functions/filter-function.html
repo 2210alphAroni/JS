@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // return array but without changes. but element will return less than existing array.
+    let a= [22,33,44,55,66,77,88,99,100]
+
+    // let filterdata=a.filter((v,i)=> v%2==0)
+    // let filterdata=a.filter((v,i)=>{
+    //     if(v%2==0){
+    //         return v;
+    //     }
+    // })
+
+    let filterdata=a.filter((v,i)=>{
+        if(v%2==0){
+            return true;
+        }
+    })
+    console.log(filterdata)
+
+
+</script>
+</html>
