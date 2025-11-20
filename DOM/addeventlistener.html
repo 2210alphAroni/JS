@@ -1,0 +1,31 @@
+<!-- simple calculator -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Num1 <input type="text" class="input" placeholder="Enter the value1"> <br>
+    Num2 <input type="text" class="input" placeholder="Enter the value2"> <br>
+    <button>save</button> <br>
+    Output <input type="text" class="input" placeholder="Output"> <br>
+</body>
+<script>
+    let btn=document.querySelector("button")
+    let allinput= document.querySelectorAll(".input")
+
+    btn.addEventListener("click", ()=>{
+        let input1value=Number(allinput[0].value);
+        let input2value=Number(allinput[1].value);
+        // console.log(input1value,input2value)
+        let output = input1value+input2value;
+        allinput[2].value=output;
+
+        allinput[0].value=''
+        allinput[1].value=''
+    })
+</script>
+</html>
