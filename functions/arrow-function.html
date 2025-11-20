@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // mostly used and used in modern js.
+    // let adddata=()=> console.log("welcome")
+    // adddata()
+
+    // let adddata=(num1,num2)=> num1+num2;
+    // let result = adddata(20,30);
+    // console.log(result)
+
+    // let adddata=(num1,num2)=> {
+    //    return num1+num2;
+    // }
+    // let result = adddata(20,30);
+    // console.log(result)
+
+
+    // how this keyword differentiate between normal & arrow function using to create object.........
+    // Normal function
+    // let obj={
+    //     "roni":"roni",
+    //     "age":23,
+    //     address:"mirzapur",
+    //     adddata:function(){
+    //         console.log(this)
+    //     }
+    // }
+
+    // obj.adddata()
+
+
+    // Arrow function
+
+    let obj={
+        "roni":"roni",
+        "age":23,
+        address:"mirzapur",
+        adddata:()=>{
+            console.log(this)
+        }
+    }
+
+    obj.adddata()
+
+
+
+
+</script>
+</html>
