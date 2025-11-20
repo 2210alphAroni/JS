@@ -9,6 +9,15 @@
     
 </body>
 <script>
-    
+
+    let displayname=(res)=>{
+        return res;
+    }
+    let sumdata=(num1, num2, result)=>{
+        return result(num1+num2);
+    }
+
+    let output=sumdata(20,30,displayname)
+    console.log(output)
 </script>
 </html>
