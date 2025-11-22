@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .addclass{
+            color: red;
+            background-color: yellow;
+            font-size: 30px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button id="show">Show</button>
+    <button id="addclass">Add class</button>
+    <button id="removeclass">Remove class</button>
+    <button id="toggleclass">Toggle class</button>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quisquam in dolorem, id quam, dolores quia odit itaque nam quibusdam dolore laudantium! Consequuntur nobis expedita itaque, illum nisi sapiente sint. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, excepturi fuga. Ipsa, deleniti fugiat. Excepturi, aliquid quas praesentium quo minus esse vitae veniam odit, cum, sed eos libero dolorem sint? Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis enim distinctio voluptatibus qui iste. Libero quae officiis minima iure repellendus. Itaque placeat quos numquam assumenda exercitationem recusandae vero sint maxime?</p>
+</body>
+
+<script>
+    let btn1=document.querySelector("#show")
+    let paraelement=document.querySelector("p")
+
+    btn1.addEventListener("click",()=>{
+        paraelement.style.color="red";
+        paraelement.style.backgroundColor="yellow";
+    })
+
+    let btn2=document.querySelector("#addclass")
+
+    btn2.addEventListener("click",()=>{
+        paraelement.classList.add("addclass")
+    })
+
+    let btn3=document.querySelector("#removeclass")
+
+    btn3.addEventListener("click",()=>{
+        paraelement.classList.remove("addclass")
+    })
+
+    let btn4=document.querySelector("#toggleclass")
+
+    btn4.addEventListener("click",()=>{
+        btn4.classList.toggle("addclass")
+        paraelement.classList.toggle("addclass")
+    })
+</script>
+</html>
