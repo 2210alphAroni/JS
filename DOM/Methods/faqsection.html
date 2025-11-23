@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+        h1{
+            text-align: center;
+            padding: 30px 0px;
+        }
+        .faqMid{
+            max-width: 1000px;
+            margin: auto;
+
+        }
+        .faqItems{
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        .faqItems h3{
+            padding: 15px;
+            position: relative;
+            background-color: yellowgreen;
+            cursor: pointer;
+        }
+        .faqItems h3 span{
+            position: absolute;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .faqItems p{
+            padding: 15px;
+            line-height: 25px;
+            font-size: 18px;
+            display: none;
+        }
+
+        .showans{
+            display: block !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>Frequently Asked Questions</h1>
+    <div class="faqMid">
+        <div class="faqItems">
+            <h3>Can I trial Webflow before paying? <span>+</span></h3>
+            <p>Sure! You can test out Webflow on our free plan where you can experiment with 2 projects. Your unhosted projects will have a two-page limit, but you can purchase a site plan on a per-project basis to unlock up to 100 static pages and additional CMS pages.</p>
+        </div>
+
+        <div class="faqItems">
+            <h3>Can I trial Webflow before paying? <span>+</span></h3>
+            <p>Sure! You can test out Webflow on our free plan where you can experiment with 2 projects. Your unhosted projects will have a two-page limit, but you can purchase a site plan on a per-project basis to unlock up to 100 static pages and additional CMS pages.</p>
+        </div>
+
+        <div class="faqItems">
+            <h3>Can I trial Webflow before paying? <span>+</span></h3>
+            <p>Sure! You can test out Webflow on our free plan where you can experiment with 2 projects. Your unhosted projects will have a two-page limit, but you can purchase a site plan on a per-project basis to unlock up to 100 static pages and additional CMS pages.</p>
+        </div>
+
+        <div class="faqItems">
+            <h3>Can I trial Webflow before paying? <span>+</span></h3>
+            <p>Sure! You can test out Webflow on our free plan where you can experiment with 2 projects. Your unhosted projects will have a two-page limit, but you can purchase a site plan on a per-project basis to unlock up to 100 static pages and additional CMS pages.</p>
+        </div>
+    </div>
+</body>
+<script>
+    let allquestions=document.querySelectorAll(".faqItems h3")
+
+    allquestions.forEach((item, index)=>{
+        // console.log(item,index)
+        item.addEventListener("click",()=>{
+
+            // Others index close 
+            allquestions.forEach((heading, i)=>{
+                // console.log(heading,CurrentIndex)
+                if(index!=i){
+                    // console.log(heading,i)
+                    heading.lastElementChild.innerHTML="+";
+                    heading.nextElementSibling.classList.remove("showans")
+                }
+            })
+
+            // console.log(item.lastElementChild)
+            // Current Question Click - | +
+            if(item.lastElementChild.innerHTML=="+"){
+                item.lastElementChild.innerHTML="-";
+            }
+            else{
+                item.lastElementChild.innerHTML="+";
+            }
+            // Current Question Click Ans show | hide
+            item.nextElementSibling.classList.toggle("showans")
+        })
+    })
+</script>
+</html>
