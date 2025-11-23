@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+
+        .btnlogin{
+            padding: 10px 30px;
+            margin: 10px 10px;
+            color: black ;
+            font-weight: bold;
+            background-color: pink;
+            border: none;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .modalarea{
+            width: 30%;
+            height: 100vh;
+            background-color: #ccc;
+            position: fixed;
+            right: -500px;
+            padding: 30px;
+            transition: 0.5s;
+        }
+
+        .modalarea span{
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .headingmodal{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 150px;
+        }
+
+        .headingmodal h3{
+            color: green;
+            font-weight: 700;
+        }
+
+        .headingmodal p{
+            font-size: small;
+            font-weight: 400;
+        }
+
+        .modalarea form{
+            margin-top: 30px;
+        }
+        .modalarea form label{
+            display: block;
+        }
+
+        .modalarea form input{
+            margin-top: 10px;
+            width: 100%;
+            padding: 10px 10px;
+            border-radius: 10px;
+        }
+
+        .modalarea form button{
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px 10px;
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .modalarea form p{
+            margin-top: 15px;
+        }
+
+        .showmodal{
+            right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="modalarea">
+        <span>&times;</span>
+        <div class="headingmodal">
+            <h3>Login</h3>
+            <p>Use email,instead</p>
+        </div>
+
+        <form action="">
+            <label for="phone">
+                Mobile Number *
+            </label>
+            <input type="phone" placeholder="Enter your number"/>
+            <button>Login</button>
+            <p>Don't have an account? <a href="#">Create an account</a></p>
+        </form>
+    </div>
+    <button class="btnlogin">login</button>
+</body>
+<script>
+    let btn=document.querySelector(".btnlogin")
+    let loginmodalelement=document.querySelector(".modalarea")
+    let closebtn=document.querySelector(".modalarea span")
+
+    btn.addEventListener("click",()=>{
+        loginmodalelement.classList.add("showmodal")
+    })
+
+    closebtn.addEventListener("click",()=>{
+        loginmodalelement.classList.remove("showmodal")
+    })
+
+</script>
+</html>
