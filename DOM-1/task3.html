@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+
+        button{
+            width: 20%;
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            padding: 10px 0px;
+        }
+
+        h1{
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        p{
+            width: 800px;
+            margin: auto;
+            text-align: center;
+            margin-top: 20px;
+            line-height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <button id="darkbtn">Dark</button>
+    <button id="lightbtn">Light</button>
+    <h1>Welcome to the Universe</h1>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti molestiae unde est nisi dolores labore dolorem repellendus magnam quidem pariatur consequuntur voluptate nobis, consequatur eaque corrupti ad voluptatem laudantium voluptates?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eius voluptatem labore perspiciatis recusandae aperiam, odio, porro dolorem molestiae esse suscipit voluptatibus nemo assumenda consequuntur, incidunt omnis reprehenderit saepe officiis.
+    </p>
+</body>
+<script>
+    let darkbtn=document.querySelector("#darkbtn")
+    let lightbtn=document.querySelector("#lightbtn")
+    // let headertag=document.querySelector("h1")
+    // let paratag=document.querySelector("p")
+    // let bodypart=document.querySelector("body")
+
+    // darkbtn.addEventListener("click",()=>{
+    //     darkbtn.style.background="black";
+    //     darkbtn.style.color="white";
+    //     darkbtn.style.fontSize="40px";
+    //     bodypart.style.background="black";
+    //     headertag.style.color="white";
+    //     paratag.style.color="white";
+    //     lightbtn.style.background="black";
+    //     lightbtn.style.color="white";
+    //     lightbtn.style.fontSize="40px";
+
+    // })
+
+    // lightbtn.addEventListener("click",()=>{
+    //     darkbtn.style.background="white";
+    //     darkbtn.style.color="black";
+    //     bodypart.style.background="white";
+    //     headertag.style.color="black";
+    //     paratag.style.color="black";
+    //     lightbtn.style.background="white";
+    //     lightbtn.style.color="black";
+    // })
+
+    darkbtn.addEventListener("click",()=>{
+        document.body.style.background="black";
+        document.body.style.color="white"
+    })
+
+     lightbtn.addEventListener("click",()=>{
+        document.body.style.background="white";
+        document.body.style.color="black"
+    })
+</script>
+</html>
