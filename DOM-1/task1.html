@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Color Change</button>
+</body>
+<script>
+    let btn=document.querySelector("button")
+    let body=document.querySelector("body")
+
+    btn.addEventListener("click",()=>{
+
+        let redcode=Math.floor(Math.random()*255);
+        let greencode=Math.floor(Math.random()*255);
+        let bluecode=Math.floor(Math.random()*255);
+        body.style.background=`rgb(${redcode},${greencode},${bluecode})`
+
+        console.log(Math.floor(Math.random()*255))
+    })
+</script>
+</html>
